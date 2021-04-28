@@ -8,8 +8,8 @@ on:
    
 env:
   # Change these values if you have forked it for your own works
-  GitHubMail: "achyutbadyal4@gmail.com"
-  GitHubName: "AtomicX" 
+  GitHubMail: "jashvakharia@gmail.com"
+  GitHubName: "brucetech627" 
   Branch: "main"
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
 
       - name: Clone The Secret Mirror Repository
         run: |
-          git clone https://"${{ secrets.GH_TOKEN }}"@github.com/AtomicXZ/MirrorBawt.git source
+          git clone https://"${{ secrets.GH_TOKEN }}"@github.com/brucetech627/mirror-bot2.git source
 
       - name: Compile The Mirroring Docker Container
         run: |
@@ -50,7 +50,7 @@ jobs:
         continue-on-error: true
         run: |
           # ${GITHUB_REPOSITORY} is the repo slug which runs this script
-          git clone https://github.com/AtomicXZ/mirror-flow.git loop
+          git clone https://github.com/brucetech627/mirror-flow.git loop
           cd loop || exit 1
           echo $(( RANDOM - ( RANDOM % RANDOM ) )) > looper.txt
           git add looper.txt
